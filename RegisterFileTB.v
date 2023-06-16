@@ -40,15 +40,17 @@ initial begin
 	repeat(100) #1 Clk = ~Clk;
 end
 initial begin 
-	RegWrite1 = 0;
+	RegWrite1 = 1;
 	repeat(20) #5 RegWrite1 = ~RegWrite1;
 end  
 initial begin 
-	RegWrite2 = 0;
+	RegWrite2 = 1;
 	repeat(25) #4 RegWrite2 = ~RegWrite2;
 end
 
 always @ (posedge Clk) begin 
+
+	 #2
 	 ReadRegister1 = 0; 
 	 ReadRegister2 = 1;
 	 WriteRegister1 = 0;
