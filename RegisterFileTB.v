@@ -51,15 +51,15 @@ end
 always @ (posedge Clk) begin 
 	 ReadRegister1 = 0; 
 	 ReadRegister2 = 1;
-	 WriteRegister1 = 3;
-	 WriteRegister2 = 4;
+	 WriteRegister1 = 0;
+	 WriteRegister2 = 1;
 	 WriteData1 = Testvectors[WriteRegister1];
 	 WriteData2 = Testvectors[WriteRegister2];
 
 	 #2
-	 ReadRegister1 = 3; 
-	 ReadRegister2 = 4;
-	 WriteRegister1 = 0;
+	 ReadRegister1 = 0; 
+	 ReadRegister2 = 1;
+	 WriteRegister1 = 1;
 	 WriteRegister2 = 1;
 	 WriteData1 = Testvectors[WriteRegister1];
 	 WriteData2 = Testvectors[WriteRegister2];
